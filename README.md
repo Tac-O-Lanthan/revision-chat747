@@ -1,59 +1,24 @@
 # README
 
-## users テーブル
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| user_name           | string  | null: false, unique: true |
-| full_name           | string  | null: false               |
-| corp_name           | string  | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-<!-- user_nameは検索に用いるため一意性である -->
-<!-- passwordは正規表現で英数6字〜20字程度を求める -->
+Things you may want to cover:
 
-### Association
+* Ruby version
 
-- has_many :room_users
-- has_many :rooms, through: :room_users
+* System dependencies
 
-## rooms テーブル
+* Configuration
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| room_name          | string  | null: false, unique: true |
-| password_digest    | string  | null: false               |
-<!-- room_nameは誤ったアクセスを防ぐため一意性である -->
-<!-- has_secure_passwordを使って暗号化PWを使用する -->
+* Database creation
 
-### Association
+* Database initialization
 
-- has_many :room_users, dependent: :destroy
-- has_many :users, through: :room_users  
+* How to run the test suite
 
-## room_users テーブル
+* Services (job queues, cache servers, search engines, etc.)
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
+* Deployment instructions
 
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-## massages テーブル
-
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| content            | text    | null: false               |
-| user               | references | null: false, foreign_key: true |
-| room               | references | null: false, foreign_key: true |
-<!-- has_secure_passwordを使って暗号化PWを使用する -->
-<!-- pdf画像の保存は追って実装 -->
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
+* ...
