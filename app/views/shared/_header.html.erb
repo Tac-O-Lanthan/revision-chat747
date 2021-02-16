@@ -1,2 +1,31 @@
-</header>
+</header class='header'>
+  <div class='app-logo'>
+    <%# ロゴ画像を用意するかテキストのまま装飾する %>
+    <%# <%= link_to image_tag("app-logo.png", class:"app-logo"), "/" %>
+    <%="校正チャット"%>
+  </div>
+  <%# ユーザがログインしているときとそうでないときで表記を分ける %>
+  <div class='login-status'>
+    <%= "現在、" %>
+    <% if user_signed_in? %>
+      <%= "hogeさん が "%>
+      <%# ルームに入室しているときはルーム名を表示する %>
+      <% if current_page?(controller: 'messages', action: 'index')%>
+        <%= "fuga に 入室しています" %>
+      <% else %>
+        <%= "ログインしています" %>
+      <% end %>
+    <% else %>
+      <%= "ログインしていません" %>
+    <% end%>
+  </div>
+  <%# ユーザーログインしていないときはログインとサインアップを、していればログアウトを表示する %>
+  <ul class='login-button'>
+    <% if user_signed_in? %>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    <% end %>
+  </ul>
 </header>
