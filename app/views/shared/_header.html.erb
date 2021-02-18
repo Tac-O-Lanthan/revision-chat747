@@ -6,7 +6,6 @@
     </div>
     <%# ユーザがログインしているときとそうでないときで表記を分ける %>
     <div class='login-status'>
-      <%= "現在、" %>
       <% if user_signed_in? %>
         <span style="color:green"><%= "hogeさん"%></span>
         <%= "が"%>
@@ -19,7 +18,7 @@
           <%= "ログインしています" %>
         <% end %>
       <% else %>
-        <span style="color:red"><%= "ログインしていません" %></span>
+      <%= "チャットを始めるときは、" %><span style="color:red"><%= "ログインしてください" %></span>
       <% end%>
     </div>
     <%# ユーザーログインしていないときはログインとサインアップを、していればログアウトを表示する %>

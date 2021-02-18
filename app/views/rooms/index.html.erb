@@ -1,1 +1,28 @@
 <%= render "shared/header" %>
+
+<div class="main">
+  <div class="main-left">
+    
+  </div>
+
+  <div class="main-right">
+    <%# ルームを表示する処理 %>
+    <% @rooms.each do |room| %>
+      <li class='room-list'>
+        <%# <%= link_to message_path(item.id) do %>
+          <div class="room-name">
+            <%= room.room_name %>
+          </div>
+        <%# <% end %>
+      </li>
+    <% end %>
+  <%# ルームがないときのダミー %>
+  <% unless Room.exists?%>
+    <li class='room-list'>
+      <div class="room-name">
+        <%= "見本チャットルーム" %>
+      </div>
+    </li>
+  <% end %>
+  </div>
+</div>
