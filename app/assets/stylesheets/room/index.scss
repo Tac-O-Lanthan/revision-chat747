@@ -6,15 +6,42 @@
   width: 30%;
   height: calc(100vh - 100px);
   border-right: 2px solid #698aab;
-  background-color: #ebf6f7;
+  background-color: #eaf4fc;
 }
 
 .main-right {
   width: 70%;
   height: calc(100vh - 100px);
   background-color: #ebf6f7;
+  display: block;
+  position: relative;
+}
+
+.main-right-title {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 24px;
 }
 
 .room-list {
-  list-style: none;
+  position: absolute;
+  list-style: square;
+  font-size: 32px;
+  top: 40px;
+  left: 2vw;
+
+  .rooms {
+    margin-bottom: 6vh;
+  }
+  
+  .room-link {
+    text-decoration: none;
+  }
+
+  .room-latest {
+    font-size: 24px;
+    margin-left: 2vw;
+  }
+
 }
