@@ -2,7 +2,18 @@
 
 <div class="main">
   <div class="main-left">
-    
+    <div class="main-left-title">
+      <%= "操作メニュー" %>
+    </div>
+    <ul class='room-menu'>
+      <li class='menus'>
+        <%= link_to '新しいチャットルームの作成', new_room_path, method: :get, class: "room-create" %>
+      </li>
+      <li class='menus'>
+        <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
+        <%= "新しいチャットメンバーの追加" %>
+      </li>
+    </ul>
   </div>
 
   <div class="main-right">
