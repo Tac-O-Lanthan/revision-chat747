@@ -11,11 +11,15 @@
       </li>
       <li class='menus'>
         <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
-        <%= "新しいチャットメンバーの追加" %>
+        <div class="room-add-member">
+          <%= "新しいチャットメンバーの追加" %>
+        </div>
       </li>
       <li class='menus'>
         <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
-        <%= "入室中のチャットルームの削除" %>
+        <div class="room-destroy">
+          <%= "入室中のチャットルームの削除" %>
+        </div>
       </li>
     </ul>
   </div>

@@ -32,11 +32,14 @@
 
 .menus {
   font-size: 20px;
-  padding: 10px;
   border: 1px solid #698aab;
   background-color: #eaf4fc;
   margin-bottom: 50px;
   width: 310px;
+  .room-create, .room-add-member, .room-destroy {
+    display: block;
+    padding: 10px;
+  }
 }
 
 .room-create {
