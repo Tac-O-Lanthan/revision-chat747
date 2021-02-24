@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RevisionChat747</title>
+    <title>校正チャット</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <%# 8,9行目の'data-turbolinks-track': 'reload' はJSの妨げになる可能性を考慮して削除 %>
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>

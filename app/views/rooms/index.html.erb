@@ -1,0 +1,84 @@
+<%= render "shared/header" %>
+
+<div class="main">
+  <div class="main-left">
+    <div class="main-left-title">
+      <%= "操作メニュー" %>
+    </div>
+    <ul class='room-menu'>
+      <%# <% unless current_page?(controller: 'messages', action: 'index') %>
+      <li class='menus'>
+        <%= link_to '新しいチャットルームの作成', new_room_path, method: :get, class: "room-create" %>
+      </li>
+      <%# <% end %>
+      <li class='menus'>
+        <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
+        <div class="room-add-member">
+          <%= "このルームにメンバーを追加" %>
+        </div>
+      </li>
+      <li class='menus'>
+        <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
+        <div class="room-destroy">
+          <%= "このチャットルームを削除" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-right">
+    <div class="main-right-title">
+      <%= "ルーム一覧" %>
+    </div>
+    <%# ルームを表示する処理 %>
+    <ul class='room-list'>
+      <% @rooms.each do |room| %>
+        <li class='rooms'>
+          <%= link_to('#', class: 'room-link') do %>
+            <div class='room-status'>
+              <div class="room-name">
+                <%= "【#{room.room_name}】" %>
+              </div>
+              <div class="room-latest">
+                <%= "最新のメッセージ" %>
+                <%# messagesのcreated_atを参照する。モデル作成後に記述 %>
+                <%= "2021年2月5日" %>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <%# ルームがないときのダミー %>
+  <% unless Room.exists?%>
+    <ul class='room-list'>
+      <li class='rooms'>
+        <%= link_to('#', class: 'room-link') do %>
+          <div class='room-status'>
+            <div class="room-name">
+              <%= "【見本チャットルーム】" %>
+            </div>
+            <div class="room-latest">
+              <%= "最新のメッセージ" %>
+              <%= "2021年2月5日" %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+      <li class='rooms'>
+        <%= link_to('#', class: 'room-link') do %>
+          <div class='room-status'>
+            <div class="room-name">
+              <%= "【見本チャットルーム】" %>
+            </div>
+            <div class="room-latest">
+              <%= "最新のメッセージ" %>
+              <%= "2021年2月5日" %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+  </div>
+</div>

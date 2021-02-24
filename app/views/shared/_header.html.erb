@@ -1,0 +1,34 @@
+</header class='header'>
+  <div class='header-belt'>
+    <div class='app-logo'>
+      <%# ロゴ画像を用意するかテキストのまま装飾する %>
+      <%= link_to image_tag("logo.png", class:"app-logo"), "/" %>
+    </div>
+    <%# ユーザがログインしているときとそうでないときで表記を分ける %>
+    <div class='login-status'>
+      <% if user_signed_in? %>
+        <span style="color:green"><%= "hogeさん"%></span>
+        <%= "が"%>
+        <%# ルームに入室しているときはルーム名を表示する %>
+        <% if current_page?(controller: 'messages', action: 'index')%>
+          <span style="color:green"><%= "fuga" %></span>
+          <%= "に"%>
+          <%= "入室しています"%>
+        <% else %>
+          <%= "ログインしています" %>
+        <% end %>
+      <% else %>
+      <%= "チャットを始めるときは、" %><span style="color:red"><%= "ログインしてください" %></span>
+      <% end%>
+    </div>
+    <%# ユーザーログインしていないときはログインとサインアップを、していればログアウトを表示する %>
+    <ul class='nav'>
+      <% if user_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>

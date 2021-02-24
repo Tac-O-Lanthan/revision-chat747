@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  color: #0f2350;
+  font-family: 'Verdana','メイリオ', Meiryo,YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.header-belt {
+  width: 100vw;
+  height: 100px;
+  background-color: #abced8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 2px solid #698aab;
+  // #ebf6f7 しらあい
+  // #eaf4fc げっぱく
+  // #165e83 あい
+}
+
+.app-logo {
+  position: absolute;
+  height: 80px;
+  width: 200px;
+  margin-left: 30px;
+}
+
+.login-status {
+  font-size: 22px;
+  margin: auto;
+  // padding: 0 10px;
+  // background-color: #eaf4fc;
+  // border: 1px solid #698aab;
+}
+
+.nav {
+  position: absolute;
+  font-size: 24px;
+  right: 0;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  .login, .logout, .sign-up {
+  padding: 10px;
+  border: 1px solid #698aab;
+  margin-right: 50px;
+  text-decoration: none;
+  background-color: #eaf4fc;
+  }
+}
