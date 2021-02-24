@@ -34,7 +34,7 @@
     <ul class='room-list'>
       <% @rooms.each do |room| %>
         <li class='rooms'>
-          <%= link_to('#', class: 'room-link') do %>
+          <%= link_to(room_path, class: 'room-link') do %>
             <div class='room-status'>
               <div class="room-name">
                 <%= "【#{room.room_name}】" %>
