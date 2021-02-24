@@ -6,19 +6,21 @@
       <%= "操作メニュー" %>
     </div>
     <ul class='room-menu'>
+      <%# <% unless current_page?(controller: 'messages', action: 'index') %>
       <li class='menus'>
         <%= link_to '新しいチャットルームの作成', new_room_path, method: :get, class: "room-create" %>
       </li>
+      <%# <% end %>
       <li class='menus'>
         <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
         <div class="room-add-member">
-          <%= "新しいチャットメンバーの追加" %>
+          <%= "このルームにメンバーを追加" %>
         </div>
       </li>
       <li class='menus'>
         <%# リンクは中間テーブル実装後に記述 if current_page?(controller: 'messages', action: 'index') %>
         <div class="room-destroy">
-          <%= "入室中のチャットルームの削除" %>
+          <%= "このチャットルームを削除" %>
         </div>
       </li>
     </ul>
