@@ -1,6 +1,6 @@
 # 校正チャット
 
-![メインページ](https://user-images.githubusercontent.com/75772499/109477950-fd2d2780-7abb-11eb-97db-11ef2e3ca774.png "メインページ")
+![メインページ](https://user-images.githubusercontent.com/75772499/109477950-fd2d2780-7abb-11eb-97db-11ef2e3ca774.png)
 
 ### 概要
 - 校正チャットは、イラストや写真を修正・確認するやりとり（校正）に特化したチャットアプリです。  
