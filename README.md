@@ -45,6 +45,7 @@
 | Rubygems 3.0.3 |
 | Rails 6.0.3.4 |
 | mysql2 0.5.3 |
+| HTML/CSS |
 | JavaScript |
 | heroku 7.49.1 |
 | git 2.24.3 |
