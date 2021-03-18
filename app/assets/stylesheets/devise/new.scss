@@ -22,10 +22,27 @@
   margin-bottom: 15px;
 
   input[type="text"] {
+    width: 600px;
+  }
+
+  input[type="email"] {
+    width: 600px;
+  }
+
+  input[type="password"] {
+    width: 600px;
   }
 
 }
 
 .links {
-  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  input[type="submit"] {
+  }
 }

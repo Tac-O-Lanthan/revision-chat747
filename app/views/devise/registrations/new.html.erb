@@ -28,11 +28,7 @@
     </div>
 
     <div class="field">
-      <% if @minimum_password_length %>
-        <%= f.label :"パスワード（#{@minimum_password_length}文字以上）" %>
-      <% else %>
-        <%= f.label :"パスワード" %>
-      <% end %>
+      <%= f.label :"パスワード（半角英数6文字以上）" %>
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
