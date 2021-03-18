@@ -1,45 +1,53 @@
-<div class="information">ユーザー登録のため、情報を入力してください</div>
+<%= render "shared/header" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="registrations">
+  <div class="title">新規登録</div>
+  <div class="information">ユーザー情報を入力してください</div>
 
-  <div class="field">
-    <%= f.label :"ユーザー名（ユーザー名は、他のユーザーに公開されます）" %><br />
-    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :"ユーザー名（ユーザー名は、他のユーザーに公開されます）" %>
+      <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"お名前" %>
+      <%= f.text_field :full_name, autocomplete: "full_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"会社名" %>
+      <%= f.text_field :corp_name, autocomplete: "corp_name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"メールアドレス" %>
+      <%= f.email_field :email, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <% if @minimum_password_length %>
+        <%= f.label :"パスワード（#{@minimum_password_length}文字以上）" %>
+      <% else %>
+        <%= f.label :"パスワード" %>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"パスワード（確認のため、もう一度入力してください）" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "この内容でユーザー登録する" %>
+    </div>
+  <% end %>
+  <div class="links">
+    <%= render "devise/shared/links" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :"お名前" %><br />
-    <%= f.text_field :full_name, autocomplete: "full_name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"会社名" %><br />
-    <%= f.text_field :corp_name, autocomplete: "corp_name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"メールアドレス" %><br />
-    <%= f.email_field :email, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <% if @minimum_password_length %>
-      <%= f.label :"パスワード（#{@minimum_password_length}文字以上）" %>
-    <% else %>
-      <%= f.label :"パスワード" %>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"パスワード（確認のため、もう一度入力してください）" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "この内容でユーザー登録する" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<%= render "shared/footer" %>

@@ -36,12 +36,11 @@
   border-radius: 5px;
   box-shadow: 1px 1px 4px #698aab;
   background-color: #eaf4fc;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   width: 310px;
   .room-create, .room-add-member, .room-destroy {
     display: block;
     padding: 10px;
-    
   }
 }
 
@@ -67,10 +66,10 @@
 
 .room-list {
   position: absolute;
-  list-style: square;
-  font-size: 32px;
-  top: 40px;
+  list-style: none;
+  top: 55px;
   left: 2vw;
+  width: 700px;
 
   .rooms {
     margin-bottom: 40px;
@@ -80,8 +79,20 @@
     text-decoration: none;
   }
 
+  .room-status{
+    padding: 10px;
+    border: 4px outset #698aab;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #698aab;
+    background-color: #eaf4fc;
+  }
+
+  .room-name {
+    font-size: 28px;
+  }
+
   .room-latest {
-    font-size: 24px;
+    font-size: 18px;
     margin-left: 2vw;
     font-weight: lighter;
   }

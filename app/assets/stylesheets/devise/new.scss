@@ -1,0 +1,31 @@
+.registrations {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #ebf6f7;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.information {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 15px;
+
+  input[type="text"] {
+  }
+
+}
+
+.links {
+  margin: 20px;
+}
