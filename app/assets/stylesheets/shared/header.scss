@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  border-bottom: 1px solid #698aab;
   // #ebf6f7 しらあい
   // #eaf4fc げっぱく
   // #165e83 あい
@@ -42,7 +43,9 @@
   text-align: center;
   .login, .logout, .sign-up {
   padding: 10px;
-  border: 1px solid #698aab;
+  border: 3px double #698aab;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #698aab;
   margin-right: 50px;
   text-decoration: none;
   background-color: #eaf4fc;
