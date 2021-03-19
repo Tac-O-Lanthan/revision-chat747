@@ -10,6 +10,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .main-left-title {
@@ -53,6 +54,7 @@
   height: calc(100vh - 100px);
   background-color: #ebf6f7;
   position: relative;
+  overflow-y: scroll;
 }
 
 .main-right-title {

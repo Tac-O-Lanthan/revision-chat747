@@ -1,8 +1,11 @@
-.registrations {
+// JavaScriptを適用する余裕ができたら、テキストボックスや送信ボタンをカスタマイズする
+
+.registrations, .sessions {
   display: flex;
   flex-flow: column;
   align-items: center;
   background-color: #ebf6f7;
+  width: 100%;
 }
 
 .title {
@@ -21,16 +24,28 @@
   flex-flow: column;
   margin-bottom: 15px;
 
+  .label {
+    display: flex;
+    justify-content: center;
+  }
+
   input[type="text"] {
-    width: 600px;
+    width: 500px;
   }
 
   input[type="email"] {
-    width: 600px;
+    width: 500px;
   }
 
   input[type="password"] {
-    width: 600px;
+    width: 500px;
+  }
+
+  .remember_me {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 
 }

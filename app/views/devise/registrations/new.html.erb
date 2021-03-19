@@ -8,32 +8,44 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :"ユーザー名（ユーザー名は、他のユーザーに公開されます）" %>
+      <div class="label">
+        <%= f.label :"ユーザー名（他のユーザーに公開されます）" %>
+      </div>
       <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
     </div>
 
     <div class="field">
-      <%= f.label :"お名前" %>
+      <div class="label">
+        <%= f.label :"お名前" %>
+      </div>
       <%= f.text_field :full_name, autocomplete: "full_name" %>
     </div>
 
     <div class="field">
-      <%= f.label :"会社名" %>
+      <div class="label">
+        <%= f.label :"会社名" %>
+      </div>
       <%= f.text_field :corp_name, autocomplete: "corp_name" %>
     </div>
 
     <div class="field">
-      <%= f.label :"メールアドレス" %>
+      <div class="label">
+        <%= f.label :"メールアドレス" %>
+      </div>
       <%= f.email_field :email, autocomplete: "email" %>
     </div>
 
     <div class="field">
-      <%= f.label :"パスワード（半角英数6文字以上）" %>
+      <div class="label">
+        <%= f.label :"パスワード（半角英数6文字以上）" %>
+      </div>
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
     <div class="field">
-      <%= f.label :"パスワード（確認のため、もう一度入力してください）" %>
+      <div class="label">
+        <%= f.label :"パスワード（確認のため、もう一度入力してください）" %>
+      </div>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
