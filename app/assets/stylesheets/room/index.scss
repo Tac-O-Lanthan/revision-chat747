@@ -4,28 +4,28 @@
 
 .main-left {
   width: 30%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   border-right: 1px solid #698aab;
   background-color: #ebf6f7;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow-y: scroll;
 }
 
 .main-left-title {
   position: absolute;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-bottom: 10px;
+  top: 10px;
+  left: 30px;
   font-size: 24px;
-  width: 100%;
 }
 
 .room-menu {
   position: absolute;
   list-style: none;
-  top: 60px;
+  top: 55px;
+  left: 50px;
   padding-left: 0;
   text-align: center;
   display: block;
@@ -37,21 +37,42 @@
   // border-radius: 5px;
   box-shadow: 1px 1px 4px #698aab;
   background-color: #eaf4fc;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 310px;
   .room-create, .room-add-member, .room-destroy {
     display: block;
     padding: 10px;
+    text-decoration: none;
   }
 }
 
-.room-create {
+.tag-title {
+  position: absolute;
+  top: 340px;
+  left: 30px;
+  font-size: 24px;
+}
+
+.tag-list {
+  position: absolute;
+  left: 50px;
+  top: 380px;
+  font-size: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.genko-link {
   text-decoration: none;
 }
 
 .main-right {
   width: 70%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   background-color: #ebf6f7;
   position: relative;
   overflow-y: scroll;
@@ -59,19 +80,19 @@
 
 .main-right-title {
   position: absolute;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-bottom: 10px;
+  top: 10px;
+  left: 30px;
   font-size: 24px;
-  width: 100%;
 }
 
 .room-list {
   position: absolute;
   list-style: none;
+  padding-left: 0;
   top: 55px;
-  left: 2vw;
+  left: 50px;
   width: 700px;
+  
 
   .rooms {
     margin-bottom: 40px;
