@@ -1,15 +1,9 @@
-// 全体への適用
 * {
   box-sizing: border-box;
   color: #0f2350;
   font-family: 'Verdana','メイリオ', Meiryo,YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
 }
 
-html {
-  overflow-y: scroll;
-}
-
-// ヘッダ
 .header-belt {
   width: 100%;
   height: 100px;
@@ -49,9 +43,8 @@ html {
   text-align: center;
   .login, .logout, .sign-up {
   padding: 10px;
-  border: 3px outset #698aab;
-  // border-radius: 5px;
-  box-shadow: 1px 1px 3px #698aab;
+  border-radius: 5px;
+  box-shadow: 0 0 px #698aab;
   margin-right: 50px;
   text-decoration: none;
   background-color: #eaf4fc;
