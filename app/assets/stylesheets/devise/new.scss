@@ -1,0 +1,62 @@
+// JavaScriptを適用する余裕ができたら、テキストボックスや送信ボタンをカスタマイズする
+
+.registrations, .sessions {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #ebf6f7;
+  width: 100%;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.information {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.field {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 15px;
+
+  .label {
+    display: flex;
+    justify-content: center;
+  }
+
+  input[type="text"] {
+    width: 500px;
+  }
+
+  input[type="email"] {
+    width: 500px;
+  }
+
+  input[type="password"] {
+    width: 500px;
+  }
+
+  .remember_me {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.links {
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  // input[type="submit"] {}
+}

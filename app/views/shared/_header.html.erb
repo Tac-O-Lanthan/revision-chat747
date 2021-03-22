@@ -1,5 +1,8 @@
 </header class='header'>
   <div class='header-belt'>
+    <div class="copyright">
+      <%= "©︎ 2021 Takuya Ohshima: Tac-O-Lanthan on GitHub" %>
+    </div>
     <div class='app-logo'>
       <%# ロゴ画像を用意するかテキストのまま装飾する %>
       <%= link_to image_tag("logo.png", class:"app-logo"), "/" %>
@@ -9,8 +12,9 @@
       <% if user_signed_in? %>
         <span style="color:green"><%= "hogeさん"%></span>
         <%= "が"%>
-        <%# ルームに入室しているときはルーム名を表示する %>
-        <% if current_page?(controller: 'messages', action: 'index')%>
+        <%# ルームに入室しているときはルーム名を表示する 現在メッセージモデル未作成のためコメントアウト%>
+        <%# <% if current_page?(controller: 'messages', action: 'index')%>
+        <% unless user_signed_in?%>
           <span style="color:green"><%= "fuga" %></span>
           <%= "に"%>
           <%= "入室しています"%>

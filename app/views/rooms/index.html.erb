@@ -24,6 +24,25 @@
         </div>
       </li>
     </ul>
+    <div class="tag-title">
+      <%= "このルームの校正一覧" %>
+    </div>
+    <ul class='tag-list'>
+      <li class='tags'>
+        <%= link_to('#', class: 'genko-link') do %>
+          <div>
+            <%= "見本・校正１回目"%>
+          </div>
+        <% end %>
+      </li>
+      <li class='tags'>
+        <%= link_to('#', class: 'genko-link') do %>
+          <div>
+            <%= "見本・校正２回目"%>
+          </div>
+        <% end %>
+      </li>
+    </ul>
   </div>
 
   <div class="main-right">
@@ -56,7 +75,7 @@
         <%= link_to('#', class: 'room-link') do %>
           <div class='room-status'>
             <div class="room-name">
-              <%= "【見本チャットルーム】" %>
+              <%= "見本チャットルーム" %>
             </div>
             <div class="room-latest">
               <%= "最新のメッセージ" %>
@@ -69,7 +88,7 @@
         <%= link_to('#', class: 'room-link') do %>
           <div class='room-status'>
             <div class="room-name">
-              <%= "【見本チャットルーム】" %>
+              <%= "見本チャットルーム" %>
             </div>
             <div class="room-latest">
               <%= "最新のメッセージ" %>
@@ -82,5 +101,3 @@
   <% end %>
   </div>
 </div>
-
-<%= render "shared/footer" %>
