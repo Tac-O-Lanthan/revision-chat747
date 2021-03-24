@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   # index以外は全てログイン必須。ログイン機能完成までコメントアウト
-  # before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index]
   
   # ホームページ
   def index
