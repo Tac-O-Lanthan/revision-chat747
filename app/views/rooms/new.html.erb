@@ -1,2 +1,23 @@
 <%= render "shared/header" %>
 
+<div class="room-new">
+  <div class="room-new-title">新しいチャットルームの作成</div>
+  <%# 特に別モデルに飛ばしているわけではないので一旦urlは記述しない、するならnew_room_pathでトライ %>
+  <%= form_with model: @room, local: true do |f| %>
+  <div class="room-new-room-name">
+    <%= f.label :"チャットルーム名" %>
+    <%= f.text_field :room_name, autofocus: true, placeholder:"ルーム名を入力してください" %>
+  </div>
+
+  <div class="room-new-password">
+    <%= f.label :"入室パスワード" %>
+    <%= f.text_field :password, autofocus: true, placeholder:"半角英数6文字以上で入力してください" %>
+  </div>
+
+  <div class="room-new-password-confirmation">
+    <%= f.label :"入室パスワード" %>
+    <%= f.text_field :password_confirmation, autofocus: true, placeholder:"確認のため、もう一度入力してください" %>
+  </div>
+
+  <% end %>
+</div>

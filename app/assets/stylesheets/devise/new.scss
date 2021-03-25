@@ -1,11 +1,14 @@
 // JavaScriptを適用する余裕ができたら、テキストボックスや送信ボタンをカスタマイズする
+// ログイン・サインアップ兼用
 
 .registrations, .sessions {
   display: flex;
   flex-flow: column;
   align-items: center;
   background-color: #ebf6f7;
+  height: calc(100vh - 90px);
   width: 100%;
+  overflow-y: scroll;
 }
 
 .title {
