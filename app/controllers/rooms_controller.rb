@@ -4,7 +4,8 @@ class RoomsController < ApplicationController
   
   # ホームページ
   def index
-    @rooms = Room.all.includes(:user)
+    @rooms = Room.all
+    # .includes(:user)
   end
 
   # roomsコントローラーのshowアクションは、入室のためのパスワード入力画面表示として使う
@@ -19,6 +20,7 @@ class RoomsController < ApplicationController
   # 作成したルームの保存
   def create
     @room = Room.new(room_params)
+    binding.pry
     if @room.save
       redirect_to root_path
     else
@@ -29,7 +31,7 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:room_name, :password_digest)
+    params.require(:room).permit(:room_name, :password, :password_confirmation, :authenticity_token)
   end
 
 end

@@ -53,10 +53,10 @@
     <ul class='room-list'>
       <% @rooms.each do |room| %>
         <li class='rooms'>
-          <%= link_to(room_path, class: 'room-link') do %>
+          <%= link_to(room_path(room.id), class: 'room-link') do %>
             <div class='room-status'>
               <div class="room-name">
-                <%= "【#{room.room_name}】" %>
+                <%= room.room_name %>
               </div>
               <div class="room-latest">
                 <%= "最新のメッセージ" %>
