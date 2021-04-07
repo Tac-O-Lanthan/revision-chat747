@@ -4,4 +4,6 @@ class Room < ApplicationRecord
     validates :room_name
     validates :password, format: { with: /\A(?=.*?[a-zA-Z])(?=.*?[0-9])[a-zA-Z0-9]{6,}\z/ }
   end
+  has_many :room_users
+  has_many :users, through: :room_users
 end
