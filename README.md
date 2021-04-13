@@ -112,3 +112,7 @@ https://revision-chat747-33053on90.herokuapp.com/
 
 - belongs_to :room
 - belongs_to :user
+
+
+## 備考
+- (21.04.13)就職・PC環境再設定のため、作成を休止しております。
