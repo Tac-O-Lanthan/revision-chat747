@@ -3,7 +3,7 @@
 <div class="main">
   <div class="main-left">
     <div class="main-left-title">
-      <%= "操作メニュー" %>
+      <%= "メニュー" %>
     </div>
     <ul class='room-menu'>
       <%# <% unless current_page?(controller: 'messages', action: 'index') %>
@@ -25,7 +25,7 @@
       </li>
     </ul>
     <div class="tag-title">
-      <%= "このルームの校正一覧" %>
+      <%= "このルームの校正" %>
     </div>
     <ul class='tag-list'>
       <li class='tags'>
@@ -53,10 +53,10 @@
     <ul class='room-list'>
       <% @rooms.each do |room| %>
         <li class='rooms'>
-          <%= link_to(room_path, class: 'room-link') do %>
+          <%= link_to(room_path(room.id), class: 'room-link') do %>
             <div class='room-status'>
               <div class="room-name">
-                <%= "【#{room.room_name}】" %>
+                <%= room.room_name %>
               </div>
               <div class="room-latest">
                 <%= "最新のメッセージ" %>

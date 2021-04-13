@@ -10,14 +10,14 @@
       <div class="label">
         <%= f.label :"メールアドレス" %>
       </div>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"メールアドレスを入力してください" %>
     </div>
 
     <div class="field">
       <div class="label">
         <%= f.label :"パスワード（半角英数6文字以上）" %>
       </div>
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:"パスワードを入力してください" %>
     </div>
 
     <% if devise_mapping.rememberable? %>

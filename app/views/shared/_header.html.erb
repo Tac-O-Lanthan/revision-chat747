@@ -10,16 +10,13 @@
     <%# ユーザがログインしているときとそうでないときで表記を分ける %>
     <div class='login-status'>
       <% if user_signed_in? %>
-        <span style="color:green"><%= "hogeさん"%></span>
-        <%= "が"%>
         <%# ルームに入室しているときはルーム名を表示する 現在メッセージモデル未作成のためコメントアウト%>
         <%# <% if current_page?(controller: 'messages', action: 'index')%>
         <% unless user_signed_in?%>
-          <span style="color:green"><%= "fuga" %></span>
-          <%= "に"%>
-          <%= "入室しています"%>
+          <%# 一部、同じ記述を繰り返しているのは、文章の間にスペースを作らないため %>
+          <span style="color:green"><%= current_user.user_name%></span><%= "さんが"%><span style="color:green"><%= "fuga" %></span><%= "に入室しています"%>
         <% else %>
-          <%= "ログインしています" %>
+          <span style="color:green"><%= current_user.user_name%></span><%= "さんがログインしています"%>
         <% end %>
       <% else %>
       <%= "チャットを始めるときは、" %><span style="color:red"><%= "ログインしてください" %></span>

@@ -10,6 +10,8 @@ class User < ApplicationRecord
     validates :full_name
     validates :corp_name
   end
+  has_many :room_users
+  has_many :users, through: :room_users
 end
 
   # 正規表現
