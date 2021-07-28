@@ -2,7 +2,7 @@
 https://revision-chat747-33053on90.herokuapp.com/  
 (このアプリは作成中です)
 
-![メインページ](https://user-images.githubusercontent.com/75772499/109477950-fd2d2780-7abb-11eb-97db-11ef2e3ca774.png)
+![メインページ](https://user-images.githubusercontent.com/75772499/127296565-15904e28-a2f0-41d1-827c-38150d7bfaa3.png)
 
 ## 概要
 - 校正チャットは、イラストや写真を修正・確認するやりとり（校正）に特化したチャットアプリです。  
